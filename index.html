@@ -10,277 +10,276 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    overflow-x:hidden;
-    background:linear-gradient(135deg,#ffb6c1,#ff8fb1,#ffc0cb);
-    min-height:100vh;
-    position:relative;
+overflow-x:hidden;
+background:linear-gradient(135deg,#ffb6c1,#ff8fb1,#ffc0cb);
+min-height:100vh;
+position:relative;
 }
 
-/* FLOATING LOVE TEXT */
+/* FLOATING TEXT */
 
 .love-text{
-    position:fixed;
-    color:#ff2d75;
-    font-weight:700;
-    opacity:0.22;
-    z-index:0;
-    animation:floatText linear infinite;
-    pointer-events:none;
-    text-shadow:0 0 10px white;
+position:fixed;
+color:#ff2d75;
+font-weight:700;
+opacity:0.22;
+z-index:0;
+animation:floatText linear infinite;
+pointer-events:none;
+text-shadow:0 0 10px white;
 }
 
 @keyframes floatText{
-    from{
-        transform:translateY(120vh) rotate(-8deg);
-    }
-    to{
-        transform:translateY(-120vh) rotate(8deg);
-    }
+from{
+transform:translateY(120vh) rotate(-10deg);
+}
+to{
+transform:translateY(-120vh) rotate(10deg);
+}
 }
 
 /* FLOATING EMOJIS */
 
 .emoji{
-    position:fixed;
-    font-size:28px;
-    z-index:0;
-    opacity:0.75;
-    animation:emojiFloat linear infinite;
-    pointer-events:none;
+position:fixed;
+font-size:30px;
+z-index:0;
+opacity:0.75;
+animation:emojiFloat linear infinite;
+pointer-events:none;
 }
 
 @keyframes emojiFloat{
-    from{
-        transform:translateY(110vh) scale(0.8);
-    }
-    to{
-        transform:translateY(-120vh) scale(1.3);
-    }
+from{
+transform:translateY(110vh) scale(0.8);
 }
-
-/* MAIN CARD */
-
-.container{
-    position:relative;
-    z-index:2;
-    width:90%;
-    max-width:850px;
-    margin:50px auto;
-    background:rgba(255,255,255,0.78);
-    backdrop-filter:blur(15px);
-    border-radius:35px;
-    padding:40px;
-    box-shadow:0 0 40px rgba(255,255,255,0.4);
-    border:3px solid rgba(255,255,255,0.5);
-    text-align:center;
+to{
+transform:translateY(-120vh) scale(1.4);
 }
-
-/* TITLE */
-
-.title{
-    font-size:3.2rem;
-    font-weight:700;
-    color:black;
-    margin-bottom:10px;
-}
-
-.small-line{
-    color:#ff2d75;
-    font-size:26px;
-    margin-bottom:25px;
-}
-
-/* PARAGRAPHS */
-
-p{
-    color:black;
-    line-height:2;
-    font-size:1.15rem;
-    margin-top:22px;
-    font-weight:600;
-}
-
-.red{
-    color:#ff003c;
-    font-size:1.45rem;
-    font-weight:700;
-}
-
-/* BUTTON */
-
-.btn{
-    margin-top:35px;
-    padding:16px 35px;
-    border:none;
-    border-radius:50px;
-    background:linear-gradient(135deg,#ff2d75,#ff5e95);
-    color:white;
-    font-size:1.1rem;
-    font-weight:700;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 0 20px rgba(255,0,85,0.4);
-}
-
-.btn:hover{
-    transform:scale(1.08);
-}
-
-.sub{
-    margin-top:10px;
-    color:black;
-    opacity:0.7;
-    font-size:14px;
-}
-
-/* POPUP */
-
-.popup{
-    position:fixed;
-    inset:0;
-    background:rgba(255,192,203,0.92);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-    animation:fadeIn 0.6s ease;
-}
-
-.popup-box{
-    width:90%;
-    max-width:600px;
-    background:white;
-    border-radius:35px;
-    padding:35px;
-    text-align:center;
-    box-shadow:0 0 30px rgba(255,0,90,0.3);
-    position:relative;
-    animation:zoom 0.6s ease;
-}
-
-.popup-box h1{
-    color:black;
-    font-size:2rem;
-}
-
-.popup-box p{
-    color:black;
-}
-
-.teddy{
-    width:240px;
-    margin-top:15px;
-    animation:bounce 2s infinite;
-    filter:drop-shadow(0 0 15px rgba(255,105,180,0.5));
-}
-
-.close{
-    position:absolute;
-    right:20px;
-    top:12px;
-    font-size:32px;
-    cursor:pointer;
-    color:#ff2d75;
-}
-
-/* HUG SCREEN */
-
-.hug-screen{
-    position:fixed;
-    inset:0;
-    background:linear-gradient(135deg,#ffb6c1,#ff7aa8);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:1000;
-    overflow:hidden;
-}
-
-.big-teddy{
-    width:280px;
-    animation:bounce 2s infinite;
-}
-
-.hug-screen h1{
-    color:white;
-    font-size:3rem;
-    margin-top:15px;
-    text-shadow:0 0 15px rgba(255,255,255,0.8);
-}
-
-.hug-screen p{
-    color:white;
-    font-size:1.2rem;
-}
-
-.hug-emojis{
-    font-size:40px;
-    margin-top:15px;
-    animation:shake 1.5s infinite;
-}
-
-/* ANIMATIONS */
-
-@keyframes bounce{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-15px);
-    }
-}
-
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-@keyframes zoom{
-    from{
-        transform:scale(0.5);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-}
-
-@keyframes shake{
-    0%,100%{
-        transform:translateX(0);
-    }
-    50%{
-        transform:translateX(10px);
-    }
 }
 
 /* HEARTS */
 
 .heart{
-    position:fixed;
-    color:red;
-    font-size:25px;
-    animation:heartFloat linear infinite;
-    opacity:0.75;
-    z-index:1;
+position:fixed;
+color:red;
+font-size:25px;
+animation:heartFloat linear infinite;
+opacity:0.75;
+z-index:1;
 }
 
 @keyframes heartFloat{
-    from{
-        transform:translateY(120vh);
-    }
-    to{
-        transform:translateY(-120vh);
-    }
+from{
+transform:translateY(120vh);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+/* MAIN CARD */
+
+.container{
+position:relative;
+z-index:2;
+width:90%;
+max-width:850px;
+margin:50px auto;
+background:rgba(255,255,255,0.82);
+backdrop-filter:blur(15px);
+border-radius:35px;
+padding:40px;
+box-shadow:0 0 40px rgba(255,255,255,0.5);
+border:3px solid rgba(255,255,255,0.6);
+text-align:center;
+}
+
+.title{
+font-size:3rem;
+font-weight:700;
+color:black;
+margin-bottom:10px;
+}
+
+.small-line{
+color:#ff2d75;
+font-size:26px;
+margin-bottom:25px;
+}
+
+p{
+color:black;
+line-height:2;
+font-size:1.15rem;
+margin-top:22px;
+font-weight:600;
+}
+
+.red{
+color:#ff003c;
+font-size:1.45rem;
+font-weight:700;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:35px;
+padding:16px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(135deg,#ff2d75,#ff5e95);
+color:white;
+font-size:1.1rem;
+font-weight:700;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 20px rgba(255,0,85,0.4);
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.sub{
+margin-top:10px;
+color:black;
+opacity:0.7;
+font-size:14px;
+}
+
+/* POPUP */
+
+.popup{
+position:fixed;
+inset:0;
+background:rgba(255,192,203,0.92);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+animation:fadeIn 0.6s ease;
+}
+
+.popup-box{
+width:90%;
+max-width:600px;
+background:white;
+border-radius:35px;
+padding:35px;
+text-align:center;
+box-shadow:0 0 30px rgba(255,0,90,0.3);
+position:relative;
+animation:zoom 0.6s ease;
+}
+
+.popup-box h1{
+color:black;
+font-size:2rem;
+}
+
+.popup-box p{
+color:black;
+}
+
+.teddy{
+width:240px;
+margin-top:15px;
+animation:bounce 2s infinite;
+filter:drop-shadow(0 0 15px rgba(255,105,180,0.5));
+}
+
+.close{
+position:absolute;
+right:20px;
+top:12px;
+font-size:32px;
+cursor:pointer;
+color:#ff2d75;
+}
+
+/* HUG SCREEN */
+
+.hug-screen{
+position:fixed;
+inset:0;
+background:linear-gradient(135deg,#ff8fb1,#ff5e95);
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:1000;
+overflow:hidden;
+text-align:center;
+padding:20px;
+}
+
+.big-teddy{
+width:300px;
+animation:bounce 2s infinite;
+filter:drop-shadow(0 0 20px rgba(255,255,255,0.4));
+}
+
+.hug-screen h1{
+color:white;
+font-size:3.2rem;
+margin-top:20px;
+text-shadow:0 0 15px rgba(255,255,255,0.8);
+}
+
+.hug-screen p{
+color:white;
+font-size:1.4rem;
+}
+
+.hug-emojis{
+font-size:45px;
+margin-top:15px;
+animation:shake 1.5s infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes zoom{
+from{
+transform:scale(0.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+@keyframes shake{
+0%,100%{
+transform:translateX(0);
+}
+50%{
+transform:translateX(10px);
+}
 }
 
 </style>
@@ -290,64 +289,64 @@ p{
 
 <div class="container">
 
-    <div class="title">❤️ To My Kerala Queen 👑</div>
+<div class="title">❤️ To My Kerala Queen 👑</div>
 
-    <div class="small-line">—— 💖 ——</div>
+<div class="small-line">—— 💖 ——</div>
 
-    <p>
-        Meri pyaari patni jiii 🥺❤️<br>
-        Mujhe pata hai aaj tum bahut hurt ho gayi thi... 😔<br>
-        Aur shayad meri wajah se tumhare dimag me<br>
-        bohot saare thoughts aa gaye... 🥺
-    </p>
+<p>
+Meri pyaari patni jiii 🥺❤️<br>
+Mujhe pata hai aaj tum bahut hurt ho gayi thi... 😔<br>
+Aur shayad meri wajah se tumhare dimag me<br>
+bohot saare thoughts aa gaye... 🥺
+</p>
 
-    <p class="red">
-        Agar me tumse pyaar nahi karta hota na...<br>
-        to me tumhe itna manata hi nahi! 🥰❤️
-    </p>
+<p class="red">
+Agar me tumse pyaar nahi karta hota na...<br>
+to me tumhe itna manata hi nahi! 🥰❤️
+</p>
 
-    <p>
-        Tumhara gussa bhi cute lagta hai mujhe 🥺<br>
-        kyuki uske peeche sirf ek darr hota hai...
-    </p>
+<p>
+Tumhara gussa bhi cute lagta hai mujhe 🥺<br>
+kyuki uske peeche sirf ek darr hota hai...
+</p>
 
-    <p class="red">
-        “Kahin me tumhe kho na du...” 🥺❤️
-    </p>
+<p class="red">
+“Kahin me tumhe kho na du...” 🥺❤️
+</p>
 
-    <p>
-        Tumne meri life ko seriously better banaya hai 🥺❤️<br>
-        Tumhare messages... tumhari care... tumhara possessive hona...<br>
-        sab kuch itna special hai mere liye ki<br>
-        me explain bhi nahi kar sakta... 🥺❤️
-    </p>
+<p>
+Tumne meri life ko seriously better banaya hai 🥺❤️<br>
+Tumhare messages... tumhari care... tumhara possessive hona...<br>
+sab kuch itna special hai mere liye ki<br>
+me explain bhi nahi kar sakta... 🥺❤️
+</p>
 
-    <p>
-        Aur haaa madam ji 🥺❤️<br>
-        Apke sir ji sirf apke hi haiii... 😌❤️<br>
-        Aur agar kisi ladki ne aas paas bhi bhatakne ki koshish ki naa...<br>
-        to meri Kerala Queen uski tail pakad ke<br>
-        usse 2 km dur fek degiii! 😭👑❤️
-    </p>
+<p>
+Aur haaa madam ji 🥺❤️<br>
+Apke sir ji sirf apke hi haiii... 😌❤️<br>
+Aur agar kisi ladki ne aas paas bhi bhatakne ki koshish ki naa...<br>
+to meri Kerala Queen uski tail pakad ke<br>
+usse 2 km dur fek degiii! 😭👑❤️
+</p>
 
-    <p>
-        Bas ek promise karo...<br>
-        Kabhi gussa ho jaana... daant lena... maar lena...<br>
-        Par please ye kabhi mat sochna ki me tumhara nahi huu... 🥺❤️
-    </p>
+<p>
+Bas ek promise karo...<br>
+Kabhi gussa ho jaana... daant lena... maar lena...<br>
+Par please ye kabhi mat sochna ki me tumhara nahi huu... 🥺❤️
+</p>
 
-    <p>
-        Because honestly...<br>
-        Meri duniya me “meri ladki” wali jagah<br>
-        sirf ek pagal si cute Kerala Queen ne<br>
-        occupy kar rakhi hai... 👑❤️🥺
-    </p>
+<p>
+Because honestly...<br>
+Meri duniya me “meri ladki” wali jagah<br>
+sirf ek pagal si cute Kerala Queen ne<br>
+occupy kar rakhi hai... 👑❤️🥺
+</p>
 
-    <button class="btn" onclick="openLove()">
-        Tap Here Madam Jiii 💖
-    </button>
+<button class="btn" onclick="openLove()">
+Tap Here Madam Jiii 💖
+</button>
 
-    <div class="sub">(Ek surprise hai tumhare liye 🥰)</div>
+<div class="sub">(Ek surprise hai tumhare liye 🥰)</div>
 
 </div>
 
@@ -355,29 +354,29 @@ p{
 
 <div class="popup" id="popup">
 
-    <div class="popup-box">
+<div class="popup-box">
 
-        <div class="close" onclick="closeLove()">×</div>
+<div class="close" onclick="closeLove()">×</div>
 
-        <h1>I LOVE YOU SO MUCH MERI PYAARIII MADAM JIII ❤️🥺😘</h1>
+<h1>I LOVE YOU SO MUCH MERI PYAARIII MADAM JIII ❤️🥺😘</h1>
 
-        <img class="teddy" src="https://i.imgur.com/6RLuK2U.png">
+<img class="teddy" src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
 
-        <p>
-            Next janam me bhi meri wife banogi naa? 🥺❤️
-        </p>
+<p>
+Next janam me bhi meri wife banogi naa? 🥺❤️
+</p>
 
-        <p>
-            Agar kabhi insecurity ho...<br>
-            to dusri ladki se nahi...<br>
-            seedha mujhe pakad ke pyaar se daant dena! 🥰❤️
-        </p>
+<p>
+Agar kabhi insecurity ho...<br>
+to dusri ladki se nahi...<br>
+seedha mujhe pakad ke pyaar se daant dena! 🥰❤️
+</p>
 
-        <button class="btn" onclick="showHug()">
-            Come Here Hug Me 🧸💕
-        </button>
+<button class="btn" onclick="showHug()">
+Come Here Hug Me 🧸💕
+</button>
 
-    </div>
+</div>
 
 </div>
 
@@ -385,15 +384,15 @@ p{
 
 <div class="hug-screen" id="hugScreen">
 
-    <img class="big-teddy" src="https://i.imgur.com/6RLuK2U.png">
+<img class="big-teddy" src="https://cdn-icons-png.flaticon.com/512/616/616408.png">
 
-    <h1>LOVE YOU SO MUCHHH ❤️</h1>
+<h1>LOVE YOU SO MUCHHH ❤️</h1>
 
-    <p>Meri pyaari madam jiii 🥺🫂❤️</p>
+<p>Meri pyaari madam jiii 🥺🫂❤️</p>
 
-    <div class="hug-emojis">
-        🫂 ❤️ 😘 🧸 💕 🥺
-    </div>
+<div class="hug-emojis">
+🫂 ❤️ 😘 🧸 💕 🥺
+</div>
 
 </div>
 
@@ -402,18 +401,18 @@ p{
 /* POPUP */
 
 function openLove(){
-    document.getElementById("popup").style.display="flex";
+document.getElementById("popup").style.display="flex";
 }
 
 function closeLove(){
-    document.getElementById("popup").style.display="none";
+document.getElementById("popup").style.display="none";
 }
 
 function showHug(){
 
-    document.getElementById("popup").style.display="none";
+document.getElementById("popup").style.display="none";
 
-    document.getElementById("hugScreen").style.display="flex";
+document.getElementById("hugScreen").style.display="flex";
 
 }
 
@@ -421,23 +420,23 @@ function showHug(){
 
 function createHeart(){
 
-    const heart=document.createElement("div");
+const heart=document.createElement("div");
 
-    heart.classList.add("heart");
+heart.classList.add("heart");
 
-    heart.innerHTML="❤️";
+heart.innerHTML="❤️";
 
-    heart.style.left=Math.random()*100+"vw";
+heart.style.left=Math.random()*100+"vw";
 
-    heart.style.fontSize=(Math.random()*25+18)+"px";
+heart.style.fontSize=(Math.random()*25+18)+"px";
 
-    heart.style.animationDuration=(Math.random()*5+5)+"s";
+heart.style.animationDuration=(Math.random()*5+5)+"s";
 
-    document.body.appendChild(heart);
+document.body.appendChild(heart);
 
-    setTimeout(()=>{
-        heart.remove();
-    },10000);
+setTimeout(()=>{
+heart.remove();
+},10000);
 
 }
 
@@ -449,21 +448,21 @@ const emojis=["😘","🥰","🫂","💕","🥺","❤️","👑","💖"];
 
 function createEmoji(){
 
-    const emoji=document.createElement("div");
+const emoji=document.createElement("div");
 
-    emoji.classList.add("emoji");
+emoji.classList.add("emoji");
 
-    emoji.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+emoji.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
 
-    emoji.style.left=Math.random()*100+"vw";
+emoji.style.left=Math.random()*100+"vw";
 
-    emoji.style.animationDuration=(Math.random()*6+5)+"s";
+emoji.style.animationDuration=(Math.random()*6+5)+"s";
 
-    document.body.appendChild(emoji);
+document.body.appendChild(emoji);
 
-    setTimeout(()=>{
-        emoji.remove();
-    },12000);
+setTimeout(()=>{
+emoji.remove();
+},12000);
 
 }
 
@@ -484,27 +483,45 @@ const texts=[
 
 function createLoveText(){
 
-    const text=document.createElement("div");
+const text=document.createElement("div");
 
-    text.classList.add("love-text");
+text.classList.add("love-text");
 
-    text.innerHTML=texts[Math.floor(Math.random()*texts.length)];
+text.innerHTML=texts[Math.floor(Math.random()*texts.length)];
 
-    text.style.left=Math.random()*100+"vw";
+text.style.left=Math.random()*100+"vw";
 
-    text.style.fontSize=(Math.random()*12+18)+"px";
+text.style.fontSize=(Math.random()*12+18)+"px";
 
-    text.style.animationDuration=(Math.random()*10+12)+"s";
+text.style.animationDuration=(Math.random()*10+12)+"s";
 
-    document.body.appendChild(text);
+document.body.appendChild(text);
 
-    setTimeout(()=>{
-        text.remove();
-    },22000);
+setTimeout(()=>{
+text.remove();
+},22000);
 
 }
 
 setInterval(createLoveText,1400);
+
+/* LOAD EXTRA */
+
+window.onload=function(){
+
+for(let i=0;i<25;i++){
+createHeart();
+}
+
+for(let i=0;i<15;i++){
+createEmoji();
+}
+
+for(let i=0;i<12;i++){
+createLoveText();
+}
+
+}
 
 </script>
 
