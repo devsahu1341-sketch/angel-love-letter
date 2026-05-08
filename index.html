@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>For My Kerala Queen ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    height:100vh;
+    background:linear-gradient(135deg,#ffb6c1,#ffc0cb,#ffd6e8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.container{
+    width:90%;
+    max-width:800px;
+    height:85vh;
+    overflow-y:auto;
+    padding:35px;
+    border-radius:30px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.18);
+    border:2px solid rgba(255,255,255,0.35);
+    box-shadow:0 0 30px rgba(255,255,255,0.3);
+    text-align:center;
+    color:white;
+    z-index:2;
+}
+
+h1{
+    font-size:2.7rem;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 25px #ff4da6;
+    }
+}
+
+p{
+    margin-top:18px;
+    line-height:2;
+    font-size:1.1rem;
+    font-weight:500;
+}
+
+.highlight{
+    color:#ff0066;
+    font-weight:bold;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#ff0066;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    animation:float linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) scale(0.5);
+    }
+    to{
+        transform:translateY(-10vh) scale(1.4);
+    }
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+}
+
+.popup-box{
+    width:85%;
+    max-width:500px;
+    background:white;
+    color:#ff0066;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    animation:pop 0.5s ease;
+}
+
+.popup-box h2{
+    margin-bottom:15px;
+}
+
+.popup-box p{
+    color:#444;
+    line-height:1.8;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close{
+    margin-top:25px;
+    background:#ff0066;
+    color:white;
+}
+
+.music{
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    color:white;
+    font-size:14px;
+    opacity:0.8;
+}
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:white;
+    border-radius:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>To My Kerala Queen 👑❤️</h1>
+
+    <p>
+        meri pyaari patni jiii🥹❤️<br><br>
+
+        mujhe pata hai aaj tum bohot hurt ho gayi thi…  
+        aur shayad meri wajah se tumhare dimag me bohot saare thoughts aa gaye🥺❤️  
+        par ek baat sach sach bolu…  
+        agar me tumse pyaar nahi karta hota naa…  
+        to me tumhe itna manata hi nahi🥹🫂❤️
+    </p>
+
+    <p>
+        tumhara gussa bhi cute lagta hai mujhe😭❤️  
+        kyuki uske peeche sirf ek darr hota hai…  
+        <span class="highlight">“kahin me tumhe kho na du…”</span> 🥺
+    </p>
+
+    <p>
+        aur meri pagliii…  
+        jisko khona hota hai na…  
+        uske liye koi itne lambe paragraphs nahi likhta😭❤️
+    </p>
+
+    <p>
+        tumne meri life ko seriously better banaya hai🥹❤️  
+        tumhare messages… tumhari care… tumhara possessive hona…  
+        sab kuch itna special hai mere liye ki me explain bhi nahi kar sakta🥺❤️
+    </p>
+
+    <p>
+        aur haaa madam ji🥹❤️  
+        apke sir ji sirf apke hi haiii😌❤️  
+        aur agar kisi ladki ne aas paas bhi bhatakne ki koshish ki naa…  
+        to meri kerala queen uski tail pakad ke usse 2 km dur fek degiii😭👑❤️
+    </p>
+
+    <p>
+        bas ek promise karo…  
+        kabhi gussa ho jaana…  
+        daant lena…  
+        maar lenaa😭❤️  
+        par please ye kabhi mat sochna ki me tumhara nahi huu🥺🫂❤️
+    </p>
+
+    <p>
+        because honestly…  
+        meri duniya me “meri ladki” wali jagah sirf ek pagal si cute kerala queen ne occupy kar rakhi hai🥹👑❤️
+    </p>
+
+    <button onclick="showLove()">
+        Tap Here Madam Jiii ❤️
+    </button>
+
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+
+        <h2>I Love You So Much 🥹❤️</h2>
+
+        <p>
+            next janam me bhi meri wife banogi naa?🥹❤️<br><br>
+
+            aur haan…  
+            agar kabhi insecurity ho…  
+            to dusri ladki se nahi…  
+            seedha mujhe pakad ke pyaar se daant dena🥺🫂❤️
+        </p>
+
+        <button class="close" onclick="closeLove()">
+            Come Here Hug Me 🫂❤️
+        </button>
+
+    </div>
+</div>
+
+<div class="music">
+    🎶 Put your favorite romantic song here 🎶
+</div>
+
+<script>
+
+function showLove(){
+    document.getElementById("popup").style.display="flex";
+}
+
+function closeLove(){
+    document.getElementById("popup").style.display="none";
+}
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.fontSize=Math.random()*25+15+"px";
+
+    heart.style.animationDuration=Math.random()*5+4+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
